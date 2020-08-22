@@ -1,0 +1,23 @@
+# Reproj and Save
+
+fix <- function(path, file, name){
+  file <- st_read(file.path(path, file))
+  st_write(file, paste0(path, '/', name, '.shp'), delete_dsn =T)
+  st_write(st_transform(file, 4326), paste0(path, '/', name, '.geojson'), delete_dsn =T)
+}
+
+fix('crime/aggravated_assault', 'aggravated_assault.shp', 'aggravated_assault')
+fix('crime/homicide', 'homicide1819.shp', 'homicide')
+
+fix('housing/lihtc', 'lihtc.shp', 'lihtc')
+fix('housing/pub_housing', 'pub_housing.shp', 'pub_housing')
+
+fix('parks', 'parks.shp', 'parks')
+
+fix('schools', 'school.shp', 'schools')
+
+fix('transit/MetroBus', 'MetroBusStops.shp', 'MetroBusStops')
+fix('transit/MetroLink', 'MetroLinkStations.shp', 'MetroLinkStations')
+
+fix('vacancy/buildings', 'vac_bldg.shp', 'buildings')
+fix('vacancy/lots','vac_lot.shp', 'lots')
