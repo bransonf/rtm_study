@@ -75,9 +75,9 @@ Unit of Measurement: Feet
 Standard Value: 300
 Place Size: 150
 For All 22 Risk Factors:
-	Operationalization: Proximity or Density
-	Standard Value Multiplier: 3
-	Analysis Increments: Half
+  Operationalization: Proximity or Density
+  Standard Value Multiplier: 3
+  Analysis Increments: Half
 ```
 
 ## Contact
